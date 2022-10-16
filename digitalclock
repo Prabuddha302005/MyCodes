@@ -1,0 +1,84 @@
+//HTML CODE//
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HackersDigitalClock.com</title>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+
+  <script src="index.js"></script>
+  <h1 id="heading">Digital clock</h1>
+  <div id="time"></div>
+  <div id="date"></div>
+
+</body>
+
+</html>
+
+//css code//
+
+html, body {
+    height: 100%;
+    max-width: 100%;
+    background: url("https://giffiles.alphacoders.com/209/209037.gif");
+    background-repeat: no-repeat;
+  background-size: 100%;
+background-color: black;
+overflow-x: hidden;
+  }
+  #time{
+    font-size: 100px;
+    color: red;
+    font-family: 'Silkscreen', cursive;
+    margin-top: 96px;
+    text-align: center;
+    /* background-color: black; */
+  }
+  #heading{
+  text-align: center;
+  margin-top: 80px;
+  font-size: 50px;
+    color: aliceblue;
+    font-family: cursive;
+    color: green;
+  }
+  #date{
+    
+    text-align: center;
+    color: red;
+    font-size: 55px;
+    margin-top: 12px;
+  
+  }
+
+//JavaScript code//
+
+setInterval(() => {
+
+    let d = new Date()
+    d.toLocaleTimeString(); 
+    time.innerHTML = d.toLocaleTimeString();
+    // d.toLocaleDateString();
+    // time.innerHTML = d.toLocaleDateString();
+  
+
+   
+
+  }, 100);
+
+  
+
+setInterval(()=>{
+
+    let b = new Date()
+    b.toLocaleDateString(); 
+    date.innerHTML = b.toLocaleDateString();
+  
+})
